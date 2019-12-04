@@ -73,5 +73,15 @@ open("converted_model.tflite", "wb").write(tflite_model)
   organization={IEEE}
 }
 ```
+[Real-Time Sleep Staging using Deep Learning on a Smartphone for a Wearable EEG](https://arxiv.org/abs/1811.10111) 
+
+```
+@article{koushik2018real,
+  title={Real-Time Sleep Staging using Deep Learning on a Smartphone for a Wearable EEG},
+  author={Koushik, Abhay and Amores, Judith and Maes, Pattie},
+  journal={arXiv preprint arXiv:1811.10111},
+  year={2018}
+}
+```
 
 
