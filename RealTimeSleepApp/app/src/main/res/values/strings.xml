@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Real-time Sleep App</string>
+    <string name="controller_titleSleep">Staging Sleep</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="clear">Exit</string>
+    <string name="detect">Detect</string>
+
+    <string name="eegdata">EEG Data</string>
+
+    <string name="hypnotext">Hypnogram</string>
+    <string name="eegVizText">EEG Visualizer</string>
+
+    <string name="calInst">Getting ready to play</string>
+    <string name="calFreq">Calm Score: 0</string>
+    <string name="createFreq">Hypnagogic Index: 0</string>
+    <string name="calibrate">Calibrate</string>
+    <string name="action_settings">Settings</string>
+    <string name="connect">Connect</string>
+    <string name="status">Status:</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="refresh">Refresh</string>
+    <string name="init_val">0.0</string>
+    <string name="initRelVal">0.0</string>
+    <string name="eeg">EEG data: Fpz-Cz</string>
+    <string name="accelgyro">Accelerometer and Gyro Data:</string>
+    <string name="Blink">Blinking: </string>
+    <string name="Clench">Jaw Clench: </string>
+    <string name="undefined">Not Connected</string>
+    <string name="artifacts">Blinks, Jaw: </string>
+    <string name="msg_count">Msg number, size: </string>
+    <string name="pause">Pause/Resume</string>
+    <string name="upload">Upload </string>
+    <string name="play">Play</string>
+    <string name="visualize">Frontal Asymmetry Index:</string>
+    <string name="ScoreFAI">Score Sum: </string>
+    <string name="sleepstage">Sleep</string>
+    <string name="defaultsleepstage">Wake</string>
+    <string name="defaultstage">Stage: 0  Confidence: 0.00000</string>
+    <string name="relative">Relative A, B, G, D, T</string>
+    <string name="absolute">Absolute A, B, G, D, T</string>
+    <string name="accelerometer">Acceleration</string>
+    <string name="drop">Drop</string>
+    <string name="muse_elem">BrainWaves Relative</string>
+    <string name="help">Help</string>
+    <string name="battery">Charge% </string>
+    <string name="packetQuality">Quality: </string>
+    <string name="permission_dialog_title">Muse Needs Your Permission</string>
+    <string name="permission_dialog_description">Muse needs a few permissions to work properly. On the next screens, tap "Allow" to proceed. If you deny, Muse will not work properly until you go into your Android settings and allow.</string>
+    <string name="permission_dialog_understand">I Understand</string>
+    <string name="editname">Enter Filename Here</string>
+    <string name="creativefeedback">Audio-Neural Feedback</string>
+    <string name="togglewave">Calm/Hypnagogic</string>
+    <string name="stdeeg">St.Dev</string>
+    <string name="Tp10">Tp10</string>
+    <string name="fai">Frontal Asymmetry Index</string>
+    <string name="viz">View</string>
+    <string name="essential_activity">BioEssence</string>
+    <string name="playlist">Choose Sound</string>
+    <string name="nseconds">sec</string>
+
+</resources>

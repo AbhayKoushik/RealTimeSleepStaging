@@ -1,0 +1,32 @@
+<resources>
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+
+            <item name="android:colorPrimaryDark">#000000 </item>
+            <item name="android:colorAccent">@color/colorAccent</item>
+            <item name="android:colorPrimary">#ffffff</item>
+
+
+    </style>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/library</item>
+        <item name="android:textAlignment">center</item>
+        <!--<item name="android:layout_gravity">center</item>-->
+
+    </style>
+
+
+
+
+</resources>

@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:compat="http://schemas.android.com/apk/res-auto"
+    tools:context="com.choosemuse.example.libmuse.MainActivity">
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        compat:showAsAction="never"
+        android:title="@string/app_name"
+        android:theme="@style/AppBaseTheme"/>
+
+</menu>
