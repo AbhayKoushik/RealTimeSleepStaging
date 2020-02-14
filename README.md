@@ -97,7 +97,7 @@ Local/Android/data/com.medialab.realtimesleep/files/data
 Visit the MainActivity.java file of the app to play-around with the features and commented code to understand the working better.
 
 
-### Reference Credits: 
+### References:
 
 1) Model reference - CVxTz - [EEG_Classification](https://github.com/CVxTz/EEG_classification)
 
