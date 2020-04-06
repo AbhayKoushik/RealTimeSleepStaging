@@ -38,6 +38,7 @@ def get_model():
     dense_1 = Dense(nclass, activation=activations.softmax, name="dense_3")(dense_1) 
 
     model = models.Model(inputs=inp, outputs=dense_1)
+    
     opt = optimizers.Adam(0.001)
 
     model.compile(optimizer=opt, loss=losses.sparse_categorical_crossentropy, metrics=['acc'])
@@ -45,6 +46,11 @@ def get_model():
     return model
 
 def get_base_model():
+
+    #BaseCNN
+    ##The model architecture has 3 repeated sets of two 1-D convolutional (Conv1D) layers, 1-D max-pooling and spatial dropout layers.
+    # This is followed by two Conv1D, 1-D global max-pooling, dropout and dense layers. We finally have a dropout layer as the output of "Base-CNN". 
+    
     inp = Input(shape=(3000,1)) # default shape=(None, WINDOW_SIZE*30, 1)
     img_1 = Convolution1D(16, kernel_size=5, activation=activations.relu, padding="valid")(inp) 
     img_1 = Convolution1D(16, kernel_size=5, activation=activations.relu, padding="valid")(img_1)
@@ -77,14 +83,19 @@ def get_model_cnn():
     nclass = 5
 
     seq_input = Input(shape=(None, 3000, 1))
+    
+    #BaseCNN
     base_model = get_base_model()
-    # for layer in base_model.layers:
-    #     layer.trainable = False
+    
+    #Time Distributed
     encoded_sequence = TimeDistributed(base_model)(seq_input)
+    
+    #Spatial Dropout1D
     encoded_sequence = SpatialDropout1D(rate=0.01)(Convolution1D(128,
                                                                kernel_size=3,
                                                                activation="relu",
                                                                padding="same")(encoded_sequence))
+    #Dropout
     encoded_sequence = Dropout(rate=0.05)(Convolution1D(128,
                                                                kernel_size=3,
                                                                activation="relu",

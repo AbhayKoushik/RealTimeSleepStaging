@@ -1,0 +1,219 @@
+validating {'../data/eeg_fpz_cz/SC4071E0.npz': <numpy.lib.npyio.NpzFile object at 0x11de26fd0>, '../data/eeg_fpz_cz/SC4102E0.npz': <numpy.lib.npyio.NpzFile object at 0x11de38310>, '../data/eeg_fpz_cz/SC4072E0.npz': <numpy.lib.npyio.NpzFile object at 0x11de38210>, '../data/eeg_fpz_cz/SC4022E0.npz': <numpy.lib.npyio.NpzFile object at 0x11de38110>}
+testing {'../data/eeg_fpz_cz/SC4181E0.npz': <numpy.lib.npyio.NpzFile object at 0x11de26dd0>, '../data/eeg_fpz_cz/SC4182E0.npz': <numpy.lib.npyio.NpzFile object at 0x11de26ed0>}
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         (None, None, 3000, 1)     0         
+_________________________________________________________________
+time_distributed_1 (TimeDist (None, None, 64)          250416    
+_________________________________________________________________
+conv1d_9 (Conv1D)            (None, None, 128)         24704     
+_________________________________________________________________
+spatial_dropout1d_4 (Spatial (None, None, 128)         0         
+_________________________________________________________________
+conv1d_10 (Conv1D)           (None, None, 128)         49280     
+_________________________________________________________________
+dropout_3 (Dropout)          (None, None, 128)         0         
+_________________________________________________________________
+conv1d_11 (Conv1D)           (None, None, 5)           1925      
+=================================================================
+Total params: 326,325
+Trainable params: 326,325
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/25
+ - 660s - loss: 1.1501 - acc: 0.5339 - val_loss: 1.1564 - val_acc: 0.5312
+
+Epoch 00001: val_acc improved from -inf to 0.53117, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 2/25
+ - 658s - loss: 1.0265 - acc: 0.5954 - val_loss: 0.9903 - val_acc: 0.6290
+
+Epoch 00002: val_acc improved from 0.53117 to 0.62903, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 3/25
+ - 650s - loss: 0.9054 - acc: 0.6489 - val_loss: 0.9120 - val_acc: 0.6460
+
+Epoch 00003: val_acc improved from 0.62903 to 0.64600, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 4/25
+ - 658s - loss: 0.9211 - acc: 0.6135 - val_loss: 0.8449 - val_acc: 0.6853
+
+Epoch 00004: val_acc improved from 0.64600 to 0.68533, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 5/25
+ - 640s - loss: 0.7834 - acc: 0.6808 - val_loss: 0.8077 - val_acc: 0.6561
+
+Epoch 00005: val_acc did not improve from 0.68533
+Epoch 6/25
+ - 638s - loss: 0.7601 - acc: 0.6887 - val_loss: 0.6634 - val_acc: 0.7282
+
+Epoch 00006: val_acc improved from 0.68533 to 0.72820, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 7/25
+ - 639s - loss: 0.7100 - acc: 0.7281 - val_loss: 1.0552 - val_acc: 0.6153
+
+Epoch 00007: val_acc did not improve from 0.72820
+Epoch 8/25
+ - 637s - loss: 0.6858 - acc: 0.7368 - val_loss: 0.7983 - val_acc: 0.6849
+
+Epoch 00008: val_acc did not improve from 0.72820
+Epoch 9/25
+ - 639s - loss: 0.6525 - acc: 0.7566 - val_loss: 0.6550 - val_acc: 0.7766
+
+Epoch 00009: val_acc improved from 0.72820 to 0.77660, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 10/25
+ - 639s - loss: 0.5713 - acc: 0.7906 - val_loss: 0.7285 - val_acc: 0.7226
+
+Epoch 00010: val_acc did not improve from 0.77660
+Epoch 11/25
+ - 639s - loss: 0.5638 - acc: 0.7928 - val_loss: 0.6967 - val_acc: 0.7359
+
+Epoch 00011: val_acc did not improve from 0.77660
+Epoch 12/25
+ - 640s - loss: 0.5913 - acc: 0.7809 - val_loss: 0.5602 - val_acc: 0.7985
+
+Epoch 00012: val_acc improved from 0.77660 to 0.79847, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 13/25
+ - 645s - loss: 0.5397 - acc: 0.8023 - val_loss: 0.5118 - val_acc: 0.8095
+
+Epoch 00013: val_acc improved from 0.79847 to 0.80947, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 14/25
+ - 641s - loss: 0.5434 - acc: 0.8005 - val_loss: 0.5651 - val_acc: 0.7988
+
+Epoch 00014: val_acc did not improve from 0.80947
+Epoch 15/25
+ - 641s - loss: 0.5205 - acc: 0.8076 - val_loss: 0.4917 - val_acc: 0.8141
+
+Epoch 00015: val_acc improved from 0.80947 to 0.81410, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 16/25
+ - 639s - loss: 0.4672 - acc: 0.8272 - val_loss: 0.5345 - val_acc: 0.8203
+
+Epoch 00016: val_acc improved from 0.81410 to 0.82027, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 17/25
+ - 639s - loss: 0.4664 - acc: 0.8284 - val_loss: 0.5557 - val_acc: 0.7948
+
+Epoch 00017: val_acc did not improve from 0.82027
+Epoch 18/25
+ - 638s - loss: 0.4701 - acc: 0.8290 - val_loss: 0.5194 - val_acc: 0.8305
+
+Epoch 00018: val_acc improved from 0.82027 to 0.83047, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 19/25
+ - 640s - loss: 0.4422 - acc: 0.8365 - val_loss: 0.5392 - val_acc: 0.8190
+
+Epoch 00019: val_acc did not improve from 0.83047
+Epoch 20/25
+ - 639s - loss: 0.4419 - acc: 0.8373 - val_loss: 0.5496 - val_acc: 0.8199
+
+Epoch 00020: val_acc did not improve from 0.83047
+Epoch 21/25
+ - 639s - loss: 0.3974 - acc: 0.8526 - val_loss: 0.5184 - val_acc: 0.8115
+
+Epoch 00021: val_acc did not improve from 0.83047
+Epoch 22/25
+ - 662s - loss: 0.3770 - acc: 0.8585 - val_loss: 0.5057 - val_acc: 0.8259
+
+Epoch 00022: val_acc did not improve from 0.83047
+Epoch 23/25
+ - 667s - loss: 0.3440 - acc: 0.8730 - val_loss: 0.5034 - val_acc: 0.8287
+
+Epoch 00023: val_acc did not improve from 0.83047
+
+Epoch 00023: ReduceLROnPlateau reducing learning rate to 0.00010000000475.
+Epoch 24/25
+ - 676s - loss: 0.3034 - acc: 0.8852 - val_loss: 0.4620 - val_acc: 0.8530
+
+Epoch 00024: val_acc improved from 0.83047 to 0.85303, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 25/25
+ - 692s - loss: 0.2729 - acc: 0.8948 - val_loss: 0.5735 - val_acc: 0.8176
+
+Epoch 00025: val_acc did not improve from 0.85303
+acc 0.7904564315352697, f1 0.7177674445862395
+acc 0.7782608695652173, f1 0.7340698465298298
+validating {'../data/eeg_fpz_cz/SC4071E0.npz': <numpy.lib.npyio.NpzFile object at 0x11dd8bf10>, '../data/eeg_fpz_cz/SC4102E0.npz': <numpy.lib.npyio.NpzFile object at 0x11de26e90>, '../data/eeg_fpz_cz/SC4072E0.npz': <numpy.lib.npyio.NpzFile object at 0x11de26f90>, '../data/eeg_fpz_cz/SC4022E0.npz': <numpy.lib.npyio.NpzFile object at 0x11dd8bd10>}
+testing {'../data/eeg_fpz_cz/SC4191E0.npz': <numpy.lib.npyio.NpzFile object at 0x11dd8bfd0>, '../data/eeg_fpz_cz/SC4192E0.npz': <numpy.lib.npyio.NpzFile object at 0x11dd8be10>}
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_3 (InputLayer)         (None, None, 3000, 1)     0         
+_________________________________________________________________
+time_distributed_2 (TimeDist (None, None, 64)          250416    
+_________________________________________________________________
+conv1d_20 (Conv1D)           (None, None, 128)         24704     
+_________________________________________________________________
+spatial_dropout1d_8 (Spatial (None, None, 128)         0         
+_________________________________________________________________
+conv1d_21 (Conv1D)           (None, None, 128)         49280     
+_________________________________________________________________
+dropout_6 (Dropout)          (None, None, 128)         0         
+_________________________________________________________________
+conv1d_22 (Conv1D)           (None, None, 5)           1925      
+=================================================================
+Total params: 326,325
+Trainable params: 326,325
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/25
+ - 689s - loss: 1.4149 - acc: 0.4636 - val_loss: 1.5045 - val_acc: 0.4360
+
+Epoch 00001: val_acc improved from -inf to 0.43597, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 2/25
+ - 684s - loss: 1.4004 - acc: 0.4689 - val_loss: 1.4187 - val_acc: 0.4900
+
+Epoch 00002: val_acc improved from 0.43597 to 0.48997, saving model to check_cnnZwake_model_20_fold.h5
+Epoch 3/25
+ - 706s - loss: 1.4001 - acc: 0.4602 - val_loss: 1.4277 - val_acc: 0.4774
+
+Epoch 00003: val_acc did not improve from 0.48997
+Epoch 4/25
+ - 688s - loss: 1.3841 - acc: 0.4737 - val_loss: 1.4313 - val_acc: 0.4844
+
+Epoch 00004: val_acc did not improve from 0.48997
+Epoch 5/25
+ - 696s - loss: 1.4030 - acc: 0.4656 - val_loss: 1.4893 - val_acc: 0.4273
+
+Epoch 00005: val_acc did not improve from 0.48997
+Epoch 6/25
+ - 678s - loss: 1.4075 - acc: 0.4556 - val_loss: 1.4827 - val_acc: 0.4166
+
+Epoch 00006: val_acc did not improve from 0.48997
+Epoch 7/25
+ - 687s - loss: 1.4247 - acc: 0.4391 - val_loss: 1.5433 - val_acc: 0.4151
+
+Epoch 00007: val_acc did not improve from 0.48997
+
+Epoch 00007: ReduceLROnPlateau reducing learning rate to 0.00010000000475.
+Epoch 8/25
+ - 690s - loss: 1.4047 - acc: 0.4533 - val_loss: 1.4695 - val_acc: 0.4383
+
+Epoch 00008: val_acc did not improve from 0.48997
+Epoch 9/25
+ - 683s - loss: 1.3765 - acc: 0.4711 - val_loss: 1.4231 - val_acc: 0.4703
+
+Epoch 00009: val_acc did not improve from 0.48997
+Epoch 10/25
+ - 681s - loss: 1.3988 - acc: 0.4556 - val_loss: 1.4773 - val_acc: 0.4384
+
+Epoch 00010: val_acc did not improve from 0.48997
+Epoch 11/25
+ - 693s - loss: 1.4049 - acc: 0.4491 - val_loss: 1.4521 - val_acc: 0.4582
+
+Epoch 00011: val_acc did not improve from 0.48997
+Epoch 12/25
+ - 839s - loss: 1.4092 - acc: 0.4563 - val_loss: 1.4581 - val_acc: 0.4583
+
+Epoch 00012: val_acc did not improve from 0.48997
+
+Epoch 00012: ReduceLROnPlateau reducing learning rate to 1.0000000475e-05.
+Epoch 13/25
+ - 645s - loss: 1.3707 - acc: 0.4704 - val_loss: 1.4664 - val_acc: 0.4525
+
+Epoch 00013: val_acc did not improve from 0.48997
+Epoch 14/25
+ - 644s - loss: 1.4049 - acc: 0.4510 - val_loss: 1.4688 - val_acc: 0.4399
+
+Epoch 00014: val_acc did not improve from 0.48997
+Epoch 15/25
+ - 635s - loss: 1.3804 - acc: 0.4717 - val_loss: 1.4279 - val_acc: 0.4662
+
+Epoch 00015: val_acc did not improve from 0.48997
+Epoch 16/25
+ - 812s - loss: 1.4158 - acc: 0.4419 - val_loss: 1.4287 - val_acc: 0.4760
+
+Epoch 00016: val_acc did not improve from 0.48997
+Epoch 17/25
