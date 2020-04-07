@@ -1,7 +1,6 @@
 from keras import optimizers, losses, activations, models, backend
 from keras.layers import Dense, Input, Dropout, Convolution1D, MaxPool1D, GlobalMaxPool1D, GlobalAveragePooling1D, \
     concatenate, SpatialDropout1D, TimeDistributed, Bidirectional, LSTM, Reshape
-from keras_contrib.layers import CRF
 import numpy as np
 
 from utils import WINDOW_SIZE
@@ -133,6 +132,8 @@ def get_model_lstm():
     return model
 
 def get_model_cnn_crf(lr=0.001):
+    from keras_contrib.layers import CRF
+    
     nclass = 5
 
     seq_input = Input(shape=(None, 3000,1)) # default shape=(None, WINDOW_SIZE*30, 1)

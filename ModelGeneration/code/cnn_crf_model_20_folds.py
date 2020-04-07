@@ -16,7 +16,7 @@ matplotlib.use('agg') # Added to patch mpl import bug for Python 2
 import matplotlib.pyplot as plt 
 from sklearn.metrics import confusion_matrix
 import pandas as pd
-np.set_printoptions(threshold=np.nan)
+np.set_printoptions(precision=2)
 
 #This Python script trains a model to predict sleep stages.
 
@@ -142,14 +142,14 @@ def cross_validation_training():
 
         test_id = set([i]) #Test id
         all_subjects = set(subject_ids)
-        
-    	train_ids =  all_subjects - test_id # train_ids substracts the ids for all subjects minus 1 user (set([i]))
- 
+
+        train_ids =  all_subjects - test_id # train_ids substracts the ids for all subjects minus 1 user (set([i]))
+
         #From the ids that we have found, let's get the actual files and collect the data for training and test. 
         train_files, test_files = [x for x in files if x.split("/")[-1][:5] in train_ids],\
         				  [x for x in files if x.split("/")[-1][:5] in test_id]
- 
- 
+
+
         #Once we know the ids we will use for our train data: 
         #LET'S TRAIN THE MODEL!
         train_model(train_files, model_save_path) #It trains the model and saves it in the same path.
@@ -157,7 +157,7 @@ def cross_validation_training():
         #Once we have our model:
         #LET'S EVALUATE THE MODEL (for this specific subject)!
         gt, preds = eval_model(load_model(model_save_path), test_files)
-        
+
         allpreds += preds
         allgt    += gt
         
@@ -183,7 +183,7 @@ def cross_validation_training():
 def full_training():
     
     base_path = "../data/eeg_fpz_cz"     # We used the expanded Sleep-EDF database from Physionet bank. Single-channel EEG (Fpz-Cz at 100Hz) of 20 subjects.
-    print ("Loading Data from path: %s"%(base_path))
+    print("Loading Data from path: %s"%(base_path))
     
     model_save_path = "Sleep_CNN_40.h5" # Model generated with 20 subjects (2 nights par subject) as our training-set (40 nights in total because it's 100%).
 
@@ -192,9 +192,9 @@ def full_training():
 
     #Once we know the ids we will use for our train data: 
     #LET'S TRAIN THE MODEL!
-    print ("Training the model...")
+    print("Training the model...")
     train_model(files, model_save_path) #It trains the model and saves it in the same path.
-    print ("Model Trained! You can find it here: %s" %(model_save_path))
+    print("Model Trained! You can find it here: %s" %(model_save_path))
     return (model_save_path)
 
 # This function is useful for deployment. It loads the saved model and returns the prediction.
