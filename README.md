@@ -5,6 +5,7 @@ We present the first, real-time sleep staging system that uses deep learning wit
 
 [Click here to find more information about the project and to download the papers.](https://www.media.mit.edu/projects/sleep-staging-EEG/overview/)
 
+
 ## Citation
 
 [Real-time Sleep Staging using Deep Learning on 1-Channel EEG](https://ieeexplore.ieee.org/abstract/document/8771091/) 
@@ -29,6 +30,11 @@ We present the first, real-time sleep staging system that uses deep learning wit
   year={2018}
 }
 ```
+
+## Model Architecture
+Our model architecture is described in the figure below. The Base- CNN has 3 repeated sets of two 1-D convolutional (Conv1D) layers, 1-D max-pooling and spatial dropout layers. This is followed by two Conv1D, 1-D global max-pooling, dropout and dense layers. We finally have a dropout layer as the output of Base-CNN. 30-second epochs of normalized EEG at 100Hz is fed into the Time-Distributed Base-CNN model [12] as described in Figure 1. All Conv1D layers use Rectified- Linear-Units (ReLU) activation. The training uses an Adam optimizer of 0.001 with an initial learning rate of e−3 which is reduced each time the validation accuracy plateaus using ReduceLROnPlateau Keras Callbacks.
+
+![alt text](diagram.jpg)
 
 ## Model Generation
 ### Requirements
