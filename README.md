@@ -49,8 +49,8 @@ Go ahead and install all the necessary libraries to run this project in your com
 ```
 pyenv versions #Shows your current Python installs. Go ahead and install Python 3.7.7 if you don't have it.
 
-#Create a virtual environment with Python 3.7.7
-mkvirtualenv -p ~/.pyenv/versions/3.7.7/bin/python nameofyourproject
+#Create a virtual environment with Python 3.7.7 (e.g with the name "sleep-3.7")
+mkvirtualenv -p ~/.pyenv/versions/3.7.7/bin/python sleep-3.7
 
 #Install Tensorflow
 pip install tensorflow==2.1.0
@@ -105,6 +105,31 @@ python cnn_crf_model_20_folds.py
 
 -------------------------
 ## Preparing the model to run in Android
+### Convert .h5 to .tflite model
+We recommend creating a new environment with Python 3.7.7 and only install tf-nightly and keras to export to .tflite:
+```
+mkvirtualenv -p ~/.pyenv/versions/3.7.7/bin/python sleep-3.7-nightly
+pip install keras
+pip install tf-nightly
+
+```
+
+```
+cd ModelGeneration
+cd code
+```
+
+```python
+import tensorflow as tf
+model=tf.keras.models.load_model("Sleep_CNN_40.h5")
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+converter.experimental_new_converter = True
+tflite_model = converter.convert()
+open("Sleep_CNN_40.tflite", "wb").write(tflite_model)  
+
+```
+-------------------------
+## Android App
 The following instructions where tested with a model that ran in an environment using Python 2 (see commits c358c0a). We have not updated the code since then:
 
 * Ubuntu 16.04
@@ -117,18 +142,6 @@ The following instructions where tested with a model that ran in an environment 
 * numpy (1.11.1)
 * pandas (0.18.1)
 * mne (0.15.2)
-
-### Convert .h5 to .tflite model
-
-```python
-import tensorflow as tf
-
-converter = tf.lite.TFLiteConverter.from_keras_model_file("saved_model_name.h5")
-tflite_model = converter.convert()
-open("converted_model.tflite", "wb").write(tflite_model)
-```
--------------------------
-## Android App
 
 Developed with Android Studio
 
