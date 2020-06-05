@@ -14,6 +14,7 @@ import java.util.Locale;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -84,7 +85,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Looper;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -122,7 +123,7 @@ import uk.me.berndporr.iirj.Butterworth;
 
 import static java.lang.Math.sqrt;
 
-public class MainActivity extends AppCompatActivity implements OnClickListener {
+public class MainActivity extends Activity implements OnClickListener {
 
     /* Number 1, 2 and 3 correspond to the following leads in the muse */
     /* EEG Lead 1 : Frontal Af7 */
@@ -237,8 +238,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     /////////////////////// Classification Activity //////////////////////////
     private static final int INPUT_SIZE = 3000;
 
-    private static final String MODEL_FILE = "SleepZwake.tflite";
-    private static final String LABEL_FILE = "Labels_sleep.txt";
+    private static final String MODEL_FILE = "SleepZwake.tflite"; // input .tflite model here
+    private static final String LABEL_FILE = "Labels_sleep.txt"; // Sleep Labels: 0 = Wake, 1 = N1, 2 = N2, 3 = N3, 4 = REM
+
     private String valueResult1="Stage: 0";
     private String valueResult2="Stage: 0";
     private String valueResult3="Stage: 0";
@@ -2976,6 +2978,30 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //////////////////////////////////* Muse *////////////////////////////////////////
+        // We need to set the context on MuseManagerAndroid before we can do anything.
+        // This must come before other LibMuse API calls as it also loads the library.
+        manager = MuseManagerAndroid.getInstance();
+        manager.setContext(this);
+
+        Log.i(mTAG, "LibMuse version=" + LibmuseVersion.instance().getString());
+
+        WeakReference<MainActivity> weakActivity = new WeakReference<MainActivity>(this);
+        // Register a listener to receive connection state changes.
+        connectionListener = new ConnectionListener(weakActivity);
+        // Register a listener to receive data from a Muse.
+        dataListener = new DataListener(weakActivity);
+        // Register a listener to receive notifications of what Muse headbands
+        // we can connect to.
+        manager.setMuseListener(new MuseL(weakActivity));
+
+        // Muse 2016 (MU-02) headbands use Bluetooth Low Energy technology to
+        // simplify the connection process.  This requires access to the COARSE_LOCATION
+        // or FINE_LOCATION permissions.  Make sure we have these permissions before
+        // proceeding.
+
+        ensurePermissions();
+
         Log.i(mTAG,"..............OnCreate............");
 
         /////////////////////////* File Saving Module */////////////////////////////
@@ -3001,30 +3027,29 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         butterworthL.lowPass(1, 100, 45); // LowPass
 
 
-        ///////////////////////////////// Dropbox /////////////////////////////////
+        ///////////////////////////////// Dropbox ////////////////////////////////////////
         DbxRequestConfig config = DbxRequestConfig.newBuilder("/"+nameOfFile+".csv").build();
         client = new DbxClientV2(config, ACCESS_TOKEN);
-        //////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////
 
         // Load and initialize our UI.
         initUI();
-////////////////////////////////////// Visualization Module ////////////////////////////////////////////
 
-/////////////////////////////////////* GraphView */////////////////////////////////////////
-// For relative values graph
+        ////////////////////////////////////// Visualization Module ////////////////////////////////////////////
 
-
-// private LineGraphSeries<DataPoint> seriesAA, seriesAB, seriesAG, seriesAD, seriesAT;
+        /////////////////////////////////////* GraphView */////////////////////////////////////////
+        // For relative values graph
+        // private LineGraphSeries<DataPoint> seriesAA, seriesAB, seriesAG, seriesAD, seriesAT;
 
         graphWaves = findViewById(R.id.graph);
-//        hypnoGram = findViewById(R.id.hypnogram);
+        // hypnoGram = findViewById(R.id.hypnogram);
         hypnoGram3 = findViewById(R.id.hypnogram3);
 
 
 
         /* Initializing EEG Visuals and Hypnogram Af7,Tp10 */
         seriesEEG=createEEGVisuals(graphWaves);
-//        seriesStages=createHypnogram(hypnoGram,1);
+        // seriesStages=createHypnogram(hypnoGram,1);
         seriesStages3=createHypnogram(hypnoGram3,3);
 
         ///////////////////////* Media Audio Adaptation */////////////////////////////
@@ -3037,29 +3062,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 Log.i(mTAG, "MediaPlayer Prepared");
             }
         });
-        //////////////////////////////////* Muse *////////////////////////////////////////
-        // We need to set the context on MuseManagerAndroid before we can do anything.
-        // This must come before other LibMuse API calls as it also loads the library.
-        manager = MuseManagerAndroid.getInstance();
-        manager.setContext(this);
-
-        Log.i(mTAG, "LibMuse version=" + LibmuseVersion.instance().getString());
-
-        WeakReference<MainActivity> weakActivity = new WeakReference<MainActivity>(this);
-        // Register a listener to receive connection state changes.
-        connectionListener = new ConnectionListener(weakActivity);
-        // Register a listener to receive data from a Muse.
-        dataListener = new DataListener(weakActivity);
-        // Register a listener to receive notifications of what Muse headbands
-        // we can connect to.
-        manager.setMuseListener(new MuseL(weakActivity));
-
-        // Muse 2016 (MU-02) headbands use Bluetooth Low Energy technology to
-        // simplify the connection process.  This requires access to the COARSE_LOCATION
-        // or FINE_LOCATION permissions.  Make sure we have these permissions before
-        // proceeding.
-
-        ensurePermissions();
 
 
         // Start our asynchronous updates of the UI.

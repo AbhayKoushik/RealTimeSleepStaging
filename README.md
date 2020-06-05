@@ -148,7 +148,7 @@ Developed with Android Studio
 ### Environment
 
 * Java
-* Hardware Architectures Supported: armeabi-v7a
+* Hardware Architectures Supported: armeabi-v7a, x86, arm64-v8a
 
 ### Preparing the APK in Android Studio
 ```

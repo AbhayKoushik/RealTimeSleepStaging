@@ -40,17 +40,7 @@ import android.os.Trace;
 import android.support.v4.os.TraceCompat;
 import android.util.Log;
 
-
-/**
- * Created by amitshekhar on 16/03/17.
- */
-
-/**
- * A classifier specialized to label images using TensorFlow.
- */
 public class TFLiteSleepClassifier implements Classifier {
-
-
 
     private static final String TAG = "TFLiteSleepClassifier";
 
@@ -61,10 +51,10 @@ public class TFLiteSleepClassifier implements Classifier {
     /** Dimensions of inputs. */
     private static final int DIM_BATCH_SIZE = 1;
 
-    private static final int DIM_PIXEL_SIZE = 1;
+    private static final int DIM_CHANNEL_SIZE = 1;
 
-    private static final int DIM_IMG_SIZE_X = 1;
-    private static final int DIM_IMG_SIZE_Y = 3000;
+    private static final int DIM_VEC_SIZE_X = 1;
+    private static final int DIM_EEG_SIZE_Y = 3000; // 30 seconds*100Hz of EEG data
 
 
     float[][][] labelProb;
@@ -72,7 +62,7 @@ public class TFLiteSleepClassifier implements Classifier {
     // Pre-allocated buffers.
     private Vector<String> labels = new Vector<String>();
     private int[] intValues;
-    private ByteBuffer imgData = null;
+    private ByteBuffer eegData = null;
 
     private Interpreter tfLite;
 
@@ -123,10 +113,10 @@ public class TFLiteSleepClassifier implements Classifier {
             throw new RuntimeException("Problem reading label file!" , e);
         }
 
-        c.imgData =
-                ByteBuffer.allocateDirect(4*DIM_BATCH_SIZE * DIM_IMG_SIZE_X * DIM_IMG_SIZE_Y * DIM_PIXEL_SIZE); // Since float=4bytes
+        c.eegData =
+                ByteBuffer.allocateDirect(4*DIM_BATCH_SIZE * DIM_VEC_SIZE_X * DIM_EEG_SIZE_Y * DIM_CHANNEL_SIZE); // Since float=4bytes
 
-        c.imgData.order(ByteOrder.nativeOrder());
+        c.eegData.order(ByteOrder.nativeOrder());
         try {
             c.tfLite = new Interpreter(loadModelFile(assetManager, modelFilename));
         } catch (Exception e) {
@@ -145,18 +135,18 @@ public class TFLiteSleepClassifier implements Classifier {
     }
 
     private void convertStreamToByteBuffer(double[] eeg) {
-        if (imgData == null) {
+        if (eegData == null) {
             return;
         }
-        imgData.rewind();
+        eegData.rewind();
         /* Convert the image to floating point*/ // int pixel = 0;
         long startTime = SystemClock.uptimeMillis();
-        for (int i = 0; i < DIM_IMG_SIZE_X; ++i) {
-            for (int j = 0; j < DIM_IMG_SIZE_Y; ++j) {
+        for (int i = 0; i < DIM_VEC_SIZE_X; ++i) {
+            for (int j = 0; j < DIM_EEG_SIZE_Y; ++j) {
 
-                imgData.putFloat((float)eeg[j]);
+                eegData.putFloat((float)eeg[j]);
 
-                /*3 Image Channels*/ // final int val = intValues[pixel++]; imgData.put((byte) ((val >> 16) & 0xFF)); imgData.put((byte) ((val >> 8) & 0xFF)); imgData.put((byte) (val & 0xFF));
+                /*3 Image Channels*/ // final int val = intValues[pixel++]; eegData.put((byte) ((val >> 16) & 0xFF)); eegData.put((byte) ((val >> 8) & 0xFF)); eegData.put((byte) (val & 0xFF));
             }
         }
         long endTime = SystemClock.uptimeMillis();
@@ -179,7 +169,7 @@ public class TFLiteSleepClassifier implements Classifier {
         // Run the inference call.
         Trace.beginSection("run");
         startTime = SystemClock.uptimeMillis();
-        tfLite.run(imgData, labelProb);
+        tfLite.run(eegData, labelProb);
         endTime = SystemClock.uptimeMillis();
         Log.i(TAG, "Inf time: " + (endTime - startTime));
         Trace.endSection();

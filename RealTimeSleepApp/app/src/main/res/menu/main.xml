@@ -6,7 +6,7 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        compat:showAsAction="never"
+        android:showAsAction="never"
         android:title="@string/app_name"
         android:theme="@style/AppBaseTheme"/>
 
