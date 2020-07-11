@@ -1,0 +1,177 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:2:1-50:12
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\cf18046cfa3c3f0edecda40a33c4cc2a\AndroidManifest.xml:17:1-22:12
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\a0d74de1a1238dbdcb95566d1618515d\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\f1648ed7d7b69bdd2c1532783cbdbf84\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\bec0264b24813d744ee3f2f25015b730\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\8eeb1703a0e63fc2a0c78f1e569bd10f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\aae748e7f08013d1ff8059b88082dbec\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\bd614e3d3641eb580e76e39219e3549a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\1f48e120dd75448b16149d01e92896b4\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\760b0f9121cc343f56b14a854d36c232\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\2f5a8ab35910238a9944fdcff76ba09c\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\995e3a66bf5c1d5a391ec6ddf4b7c0a5\AndroidManifest.xml:17:1-22:12
+INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:2:1-50:12
+	package
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:4:5-44
+		INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:6:5-30
+		INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:5:5-28
+		INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+uses-feature#android.hardware.bluetooth_le
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:8:5-10:35
+	android:required
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:10:9-32
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:9:9-53
+uses-permission#android.permission.INTERNET
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:12:5-66
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:12:22-64
+uses-permission#android.permission.WAKE_LOCK
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:13:5-68
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:13:22-65
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:14:5-76
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:14:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:15:5-76
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:15:22-73
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:16:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:17:22-76
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:18:5-79
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:18:22-76
+uses-permission#android.permission.BLUETOOTH
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:19:5-68
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:19:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:20:5-74
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:20:22-71
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:21:5-80
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:21:22-77
+uses-permission#android.permission.READ_INTERNAL_STORAGE
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:22:5-80
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:22:22-77
+uses-permission#android.permission.WRITE_INTERNAL_STORAGE
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:23:22-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:24:5-81
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:24:22-78
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:25:5-71
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:25:22-68
+application
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:27:5-49:19
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\a0d74de1a1238dbdcb95566d1618515d\AndroidManifest.xml:10:5-20
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\a0d74de1a1238dbdcb95566d1618515d\AndroidManifest.xml:10:5-20
+	android:screenOrientation
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:33:9-45
+	android:supportsRtl
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:32:9-35
+	android:label
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:30:9-41
+	android:hardwareAccelerated
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:34:9-43
+	tools:ignore
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:35:9-48
+	android:roundIcon
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:31:9-54
+	android:icon
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:29:9-43
+	android:allowBackup
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:28:9-35
+	android:theme
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:36:9-40
+activity#com.medialab.realtimesleepapp.MainActivity
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:37:9-48:20
+	android:screenOrientation
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:41:13-49
+	android:label
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:39:13-52
+	android:windowSoftInputMode
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:40:13-52
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:38:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:43:13-46:29
+action#android.intent.action.MAIN
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:44:17-69
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:44:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:45:17-77
+	android:name
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml:45:27-74
+uses-sdk
+INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\cf18046cfa3c3f0edecda40a33c4cc2a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\cf18046cfa3c3f0edecda40a33c4cc2a\AndroidManifest.xml:20:5-44
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\a0d74de1a1238dbdcb95566d1618515d\AndroidManifest.xml:7:5-8:41
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\a0d74de1a1238dbdcb95566d1618515d\AndroidManifest.xml:7:5-8:41
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\f1648ed7d7b69bdd2c1532783cbdbf84\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\f1648ed7d7b69bdd2c1532783cbdbf84\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\bec0264b24813d744ee3f2f25015b730\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\bec0264b24813d744ee3f2f25015b730\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\8eeb1703a0e63fc2a0c78f1e569bd10f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\8eeb1703a0e63fc2a0c78f1e569bd10f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\aae748e7f08013d1ff8059b88082dbec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\aae748e7f08013d1ff8059b88082dbec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\bd614e3d3641eb580e76e39219e3549a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\bd614e3d3641eb580e76e39219e3549a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\1f48e120dd75448b16149d01e92896b4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\1f48e120dd75448b16149d01e92896b4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\760b0f9121cc343f56b14a854d36c232\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\760b0f9121cc343f56b14a854d36c232\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\2f5a8ab35910238a9944fdcff76ba09c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\2f5a8ab35910238a9944fdcff76ba09c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\995e3a66bf5c1d5a391ec6ddf4b7c0a5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\abhay\.gradle\caches\transforms-2\files-2.1\995e3a66bf5c1d5a391ec6ddf4b7c0a5\AndroidManifest.xml:20:5-44
+INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+		ADDED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+		MERGED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
+		INJECTED from E:\PraYoga\ProjectMIT\GitHub\RealTimeSleepStaging\RealTimeSleepApp\app\src\main\AndroidManifest.xml
